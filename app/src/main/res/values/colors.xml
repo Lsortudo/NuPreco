@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Var colors-->
+    <color name="primary_app_color">#FF1A75</color>
+    <color name="secondary_app_color">#99D6FF</color>
 </resources>
