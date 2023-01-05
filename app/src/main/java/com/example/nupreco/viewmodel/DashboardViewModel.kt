@@ -1,4 +1,4 @@
-package com.example.nupreco.ui.dashboard
+package com.example.nupreco.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
