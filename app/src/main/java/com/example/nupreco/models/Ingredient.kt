@@ -10,7 +10,7 @@ data class Ingredient(
     val brand: String,
     val price: Double,
     val quantity: Double,
-    val medida: String,
+    val measure: String,
     // Primeira versão do app não contará com imagem pois quero por com services, tirando da biblioteca, e não com link
     //val image: String,
 )//:java.io.Serializable
