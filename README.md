@@ -21,11 +21,12 @@ It consists of an application for you to track how many portions will be the tot
  - [x] Project idea;
  - [x] Design;
  - [x] Readme;
- - [ ]  Project setup;
- - [ ]  Gradle updated;
- - [ ]  Architeture;
+ - [x]  Project setup;
+ - [x]  Gradle updated;
+ - [x]  Architeture;
+ - [x]  ROOM Configuration;
  - [ ]  Main screen;
- - [ ]  BottomTabNavigation;
+ - [x]  BottomTabNavigation;
  - [ ]  Ingredients screen;
  - [ ]  Calculations screen;
  - [ ]  Recipes screen
@@ -41,10 +42,16 @@ It consists of an application for you to track how many portions will be the tot
 ## Updates with dates
 > **Note:** The dates may be a little off due to forgetting to update them in real time;
 
-**2022** - 	*Project idea**
-**2022** - *Project design*
-**23/03/2022** - *README creation*
-**05/01/2023** - *Project started*
+**2022** - 	*Project idea** <br>
+**2022** - *Project design* <br>
+**23/03/2022** - *README creation* <br>
+**05/01/2023** - *Project started* | *Project setup* | *Architecture* <br>
+**06/01/2023** - *Gradle updated* | *ROOM configuration* <br>
+**07/01/2023** - *To be defined* <br>
+**08/01/2023** - *To be defined* <br>
+**09/01/2023** - *To be defined* <br>
+**10/01/2023** - *To be defined* <br>
+**11/01/2023** - *To be defined* <br>
 
 
 ## Language
