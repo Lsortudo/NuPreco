@@ -32,9 +32,9 @@ class NewIngredientFragment : Fragment() {
         val root: View = binding.root
 
         val editTextName: TextView = binding.etNameIngredient
-        newIngredientViewModel.nameIngredient.observe(viewLifecycleOwner) {
+        /*newIngredientViewModel.nameIngredient.observe(viewLifecycleOwner) {
             editTextName.text = it
-        }
+        }*/
 
         return root
     }

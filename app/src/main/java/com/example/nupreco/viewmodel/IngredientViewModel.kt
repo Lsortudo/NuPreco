@@ -4,11 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class IngredientViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        /*value = "This is notifications Fragment"*/
-        value = "Pagina de calculos"
+        /*value = "This is dashboard Fragment"*/
+        value = "Pagina de ingredientes"
+
     }
     val text: LiveData<String> = _text
 }

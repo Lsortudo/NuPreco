@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.nupreco.databinding.FragmentNotificationsBinding
-import com.example.nupreco.viewmodel.NotificationsViewModel
+import com.example.nupreco.databinding.FragmentIngredientBinding
+import com.example.nupreco.viewmodel.IngredientViewModel
 
-class NotificationsFragment : Fragment() {
+class IngredientFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentIngredientBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,14 +23,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val ingredientViewModel =
+            ViewModelProvider(this).get(IngredientViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentIngredientBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDashboard
+        ingredientViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
