@@ -18,6 +18,24 @@ abstract class NuPrecoDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: NuPrecoDatabase? = null
 
+        fun getDatabase(context: Context): NuPrecoDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    /* context = */ context.applicationContext,
+                    /* klass = */ NuPrecoDatabase::class.java,
+                    /* name = */ DATABASE_NAME
+                ).build()
+                INSTANCE = instance
+                instance
+            }
+        }
+    }
+    // OLD
+    /*companion object {
+
+        @Volatile
+        private var INSTANCE: NuPrecoDatabase? = null
+
         fun getInstance(context: Context): NuPrecoDatabase =
             INSTANCE ?: synchronized(this) {
                 INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
@@ -30,7 +48,7 @@ abstract class NuPrecoDatabase : RoomDatabase() {
             ).build()
 
 
-    }
+    }*/
 
 
 }
