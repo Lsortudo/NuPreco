@@ -27,15 +27,16 @@ It consists of an application for you to track how many portions will be the tot
  - [x]  ROOM Configuration;
  - [ ]  Main screen;
  - [x]  BottomTabNavigation;
- - [ ]  Ingredients screen;
+ - [x]  Ingredients screen;
  - [ ]  Calculations screen;
- - [ ]  Recipes screen
+ - [ ]  Recipes screen;
  - [ ]  Details_Ingredients screen;
- - [ ]  Details_Recipes screen
+ - [ ]  Details_Recipes screen;
  - [ ]  Ingredients screen redesign with ROOM data;
  - [ ]  Recipes screen redesign with ROOM data;
  - [ ]  Edit, Delete and Share button enabled {**not listed as required, it's a plus**};
- - [ ]  Have the project available on Github;
+ - [x]  Have the project available on Github;
+ - [ ]  Configuration screen {**not listed as required, it's a plus**};
  - [ ]  Publish the app on Play Store {**not listed as required, it's a plus**};
  - [ ]  Loading animation{**not listed as required, it's a plus**};
 
@@ -47,9 +48,9 @@ It consists of an application for you to track how many portions will be the tot
 **23/03/2022** - *README creation* <br>
 **05/01/2023** - *Project started* | *Project setup* | *Architecture* <br>
 **06/01/2023** - *Gradle updated* | *ROOM configuration* <br>
-**07/01/2023** - *To be defined* <br>
-**08/01/2023** - *To be defined* <br>
-**09/01/2023** - *To be defined* <br>
+**07/01/2023** - *Basic viewmodel implementation* <br>
+**08/01/2023** - *List item recyclerview design* <br>
+**09/01/2023** - *Ingredient screen* <br>
 **10/01/2023** - *To be defined* <br>
 **11/01/2023** - *To be defined* <br>
 
