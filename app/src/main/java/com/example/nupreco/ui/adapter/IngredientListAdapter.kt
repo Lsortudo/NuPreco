@@ -46,7 +46,8 @@ class IngredientListAdapter :
         }
 
         override fun areContentsTheSame(oldItem: Ingredient, newItem: Ingredient): Boolean {
-            return oldItem.id == newItem.id
+            //return oldItem.id == newItem.id
+            return oldItem.name == newItem.name
         }
 
     }

@@ -8,7 +8,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NuPrecoDao {
-    @Query("SELECT * FROM Ingredient ORDER BY id ASC")
+    //@Query("SELECT * FROM Ingredient ORDER BY id ASC")
+    @Query("SELECT * FROM Ingredient ORDER BY name ASC")
     fun getAllIngredients(): Flow<List<Ingredient>>
 
     @Insert

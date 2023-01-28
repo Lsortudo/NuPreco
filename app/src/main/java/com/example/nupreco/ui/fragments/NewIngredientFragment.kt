@@ -25,18 +25,26 @@ class NewIngredientFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val newIngredientViewModel =
-            ViewModelProvider(this).get(NewIngredientViewModel::class.java)
+        /*val newIngredientViewModel =
+            ViewModelProvider(this).get(NewIngredientViewModel::class.java)*/
 
         _binding = FragmentNewIngredientBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val editTextName: TextView = binding.etNameIngredient
+        //val editTextName: TextView = binding.etNameIngredient
         /*newIngredientViewModel.nameIngredient.observe(viewLifecycleOwner) {
             editTextName.text = it
         }*/
 
         return root
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        this.binding.btSaveIngredient.setOnClickListener {
+
+        }
     }
 
     override fun onDestroyView() {

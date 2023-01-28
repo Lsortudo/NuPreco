@@ -4,11 +4,14 @@ import android.app.Application
 import com.example.nupreco.repositories.NuPrecoDatabase
 import com.example.nupreco.repositories.NuPrecoRepository
 import com.example.nupreco.repositories.repository.IngredientRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 
-class IngredientsApplication: Application {
+class IngredientsApplication: Application() {
 
-    val database by lazy { NuPrecoDatabase.getDatabase(this) }
-    val repository by lazy { IngredientRepository(database.ingredientDao()) }
+    val applicationScope = CoroutineScope(SupervisorJob())
+    val database by lazy { NuPrecoDatabase.getDatabase(applicationScope, this) }
+    val repository by lazy { IngredientRepository(database.nuPrecoDao()) }
 
 
 }
