@@ -1,21 +1,23 @@
 package com.example.nupreco.ui.fragments
 
+import android.R.attr.defaultValue
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nupreco.R
 import com.example.nupreco.application.IngredientsApplication
 import com.example.nupreco.databinding.FragmentIngredientBinding
 import com.example.nupreco.ui.adapter.IngredientListAdapter
 import com.example.nupreco.viewmodel.IngredientViewModel
 import com.example.nupreco.viewmodel.IngredientViewModelFactory
+
 
 class IngredientFragment : Fragment() {
 
@@ -50,6 +52,16 @@ class IngredientFragment : Fragment() {
         this.adapter = IngredientListAdapter()
         this.recyclerView.adapter = this.adapter
         this.recyclerView.layoutManager = LinearLayoutManager(context)
+
+        //Here get the data coming for another screen
+        val bundle = this.arguments
+        if (bundle != null) {
+            val myCode = bundle.getInt("", defaultValue)
+        }
+
+        this.binding.fabAddIngredient.setOnClickListener{
+            findNavController().navigate(R.id.action_newIngredientFragment_to_navigation_dashboard)
+        }
 
         /*val textView: TextView = binding.textDashboard
         ingredientViewModel.text.observe(viewLifecycleOwner) {

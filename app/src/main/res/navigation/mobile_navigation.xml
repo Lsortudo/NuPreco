@@ -15,11 +15,24 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.nupreco.ui.fragments.IngredientFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_ingredient" />
+        tools:layout="@layout/fragment_ingredient" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_newIngredientFragment"
+            app:destination="@id/newIngredientFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.nupreco.ui.fragments.CalculationFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_calculation" />
+    <fragment
+        android:id="@+id/newIngredientFragment"
+        android:name="com.example.nupreco.ui.fragments.NewIngredientFragment"
+        android:label="fragment_new_ingredient"
+        tools:layout="@layout/fragment_new_ingredient" >
+        <action
+            android:id="@+id/action_newIngredientFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
 </navigation>
