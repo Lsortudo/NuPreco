@@ -6,18 +6,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nupreco.application.IngredientsApplication
 import com.example.nupreco.databinding.FragmentIngredientBinding
 import com.example.nupreco.ui.adapter.IngredientListAdapter
 import com.example.nupreco.viewmodel.IngredientViewModel
+import com.example.nupreco.viewmodel.IngredientViewModelFactory
 
 class IngredientFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: IngredientListAdapter
     //private lateinit var newArrayList: ArrayList<Ingredient>
+
+
+    private val ingredientViewModel: IngredientViewModel by viewModels {
+        IngredientViewModelFactory(( /*application*/ context as IngredientsApplication).repository)
+    }
 
 
     private var _binding: FragmentIngredientBinding? = null
@@ -56,7 +65,17 @@ class IngredientFragment : Fragment() {
         return root
     }
 
+    override fun onStart() {
+        super.onStart()
 
+        ingredientViewModel.allIngredients.observe(this, Observer{ ingredients ->
+            ingredients?.let {
+                adapter.submitList(it)
+            }
+        })
+
+
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

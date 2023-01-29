@@ -1,15 +1,11 @@
 package com.example.nupreco.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import com.example.nupreco.R
+import androidx.fragment.app.Fragment
 import com.example.nupreco.databinding.FragmentNewIngredientBinding
-import com.example.nupreco.viewmodel.NewIngredientViewModel
 
 class NewIngredientFragment : Fragment() {
     private var _binding: FragmentNewIngredientBinding? = null
@@ -43,6 +39,14 @@ class NewIngredientFragment : Fragment() {
         super.onStart()
 
         this.binding.btSaveIngredient.setOnClickListener {
+
+            val fragment = Fragment()
+            val bundle = Bundle()
+            bundle.putString("code", "0")
+            fragment.setArguments(bundle)
+
+            //bundle.putInt(key, value)
+            //fragment.arguments = bundle
 
         }
     }

@@ -11,7 +11,7 @@ class IngredientsApplication: Application() {
 
     val applicationScope = CoroutineScope(SupervisorJob())
     val database by lazy { NuPrecoDatabase.getDatabase(applicationScope, this) }
-    val repository by lazy { IngredientRepository(database.nuPrecoDao()) }
+    val repository by lazy { NuPrecoRepository(database.nuPrecoDao()) }
 
 
 }
