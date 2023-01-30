@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.nupreco.R
 import com.example.nupreco.application.IngredientsApplication
 import com.example.nupreco.databinding.FragmentIngredientBinding
+import com.example.nupreco.models.Ingredient
 import com.example.nupreco.ui.adapter.IngredientListAdapter
 import com.example.nupreco.viewmodel.IngredientViewModel
 import com.example.nupreco.viewmodel.IngredientViewModelFactory
@@ -57,6 +58,7 @@ class IngredientFragment : Fragment() {
         val bundle = this.arguments
         if (bundle != null) {
             val myCode = bundle.getInt("", defaultValue)
+            ingredientViewModel.insert(Ingredient(myCode.toString()))
         }
 
         this.binding.fabAddIngredient.setOnClickListener{

@@ -42,7 +42,7 @@ class NewIngredientFragment : Fragment() {
 
             val fragment = Fragment()
             val bundle = Bundle()
-            bundle.putString("code", "0")
+            bundle.putString("code", "sds")
             fragment.setArguments(bundle)
 
             //bundle.putInt(key, value)
