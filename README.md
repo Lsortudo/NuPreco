@@ -11,6 +11,7 @@ It consists of an application for you to track how many portions will be the tot
  - **ViewBinding** - To change UI data with less pollution in activity;
  - **LifeCycle** - Android lifecycle to avoid errors/crashs;
  - **ROOM** - To save data on local DB;
+ - **Hilt** - Dependency injection;
 
 # Current state
 
