@@ -14,6 +14,7 @@ It consists of an application for you to track how many portions will be the tot
  - **LifeCycle** - Android lifecycle to avoid errors/crashs;
  - **ROOM** - To save data on local DB;
  - **Hilt** - Dependency injection;
+ - **Crashlytcs** - To locate errors;
 
 # Current state
 
