@@ -1,5 +1,7 @@
 # Food app
 
+🟡 Projeto pausado afim de aprender injeção de dependencias e consertar erros entre Fragment e a ViewModel Factory. Pausa indeterminada
+
 This challenge resumes on: An idea to not only **help normal people, but also people who work with food** (either through an app like Ifood, Uber Eats or selling at their door).
 It consists of an application for you to track how many portions will be the total, how much is the total value and per slice/unit along with goals to be achieved and last but not least: where you can save your recipes with all the details; from expense, income, ingredients, etc...
 
