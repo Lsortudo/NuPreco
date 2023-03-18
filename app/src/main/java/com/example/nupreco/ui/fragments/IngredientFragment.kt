@@ -18,8 +18,9 @@ import com.example.nupreco.models.Ingredient
 import com.example.nupreco.ui.adapter.IngredientListAdapter
 import com.example.nupreco.viewmodel.IngredientViewModel
 import com.example.nupreco.viewmodel.IngredientViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class IngredientFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView

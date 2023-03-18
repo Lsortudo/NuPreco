@@ -1,3 +1,4 @@
+/*
 package com.example.nupreco.application
 
 import android.app.Application
@@ -14,4 +15,4 @@ class IngredientsApplication: Application() {
     val repository by lazy { NuPrecoRepository(database.nuPrecoDao()) }
 
 
-}
+}*/

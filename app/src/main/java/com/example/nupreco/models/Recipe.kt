@@ -3,6 +3,7 @@ package com.example.nupreco.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/*
 @Entity
 data class Recipe(
     @PrimaryKey(autoGenerate = true) var id: Int?,
@@ -12,3 +13,5 @@ data class Recipe(
 
 
 )//:java.io.Serializable
+
+ */
